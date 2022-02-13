@@ -6,13 +6,19 @@ const Thumbnail = ({ result }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1, rotate: [0, 0, 30, 30, 0] }}
+      initial={{ opacity: 0, scale: 0.3 }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        transition: {
+          duration: 0.3,
+        },
+      }}
       viewport={{ once: true }}
       whileHover={{
         scale: 1.02,
         transition: {
-          duration: 0.1,
+          duration: 0.05,
         },
       }}
       whileTap={{
@@ -26,7 +32,7 @@ const Thumbnail = ({ result }) => {
         rotate: [0, 0, 60, 60, 0],
       }}
       transition={{ duration: 0.3 }}
-      className="group transform cursor-pointer transition duration-200 ease-in"
+      className="group my-3 transform cursor-pointer transition duration-200 ease-in"
     >
       <Image
         layout="responsive"
