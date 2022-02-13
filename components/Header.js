@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../public/img/hulu-white.png'
+import logo from '../public/img/tmdb.svg'
 import HeaderItem from './HeaderItem'
 import {
   BadgeCheckIcon,
@@ -11,12 +11,12 @@ import {
 } from '@heroicons/react/outline'
 const Header = () => {
   return (
-    <header className="flex flex-col items-center justify-between p-4 sm:flex-row-reverse">
+    <header className="flex flex-col items-center justify-between py-4 sm:flex-row-reverse">
       <Image
         className="object-contain"
         src={logo}
         alt="hulu-logo"
-        width={120}
+        width={150}
         height={60}
       />
       <ul className="flex w-full flex-grow justify-between sm:max-w-2xl">

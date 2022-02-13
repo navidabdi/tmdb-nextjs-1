@@ -5,17 +5,15 @@ import Results from '../Components/Results'
 import requests from '../utils/requests'
 
 export default function Home({ results }) {
+  // console.log(results)
   return (
-    <div>
+    <div className="m-auto w-[93%]">
       <Head>
-        <title>Create Next App</title>
+        <title>Hulu 2.0</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Header />
-
       <Nav />
-
       <Results results={results} />
     </div>
   )
@@ -23,7 +21,6 @@ export default function Home({ results }) {
 
 export async function getServerSideProps(context) {
   const genre = context.query.genre
-
   const request = await fetch(
     `https://api.themoviedb.org/3${
       requests[genre]?.url || requests.fetchTrending.url
