@@ -5,11 +5,10 @@ import Results from '../Components/Results'
 import requests from '../utils/requests'
 
 export default function Home({ results }) {
-  // console.log(results)
   return (
     <div className="m-auto w-[93%]">
       <Head>
-        <title>Hulu 2.0</title>
+        <title>TMDB 1.0</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
